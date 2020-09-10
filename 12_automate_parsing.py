@@ -1,9 +1,9 @@
 import os # os module let you navigate and change files etc.
 
-os.chdir('Users/philmoon/Downloads')
+os.chdir('Users/philmoon/Downloads') # locating the directory of interest.
 
-for files in os.listdir():
-    file_name, file_ext = os.path.splitext(files)
+for files in os.listdir(): # for loop in my directory as they lists.
+    file_name, file_ext = os.path.splitext(files) # defining tuples of the original file names as their extension are splitted.
 
     file_name, file_course, file_number = file_name.split('-') # getting rid of the '-' in the original file names.
 
@@ -13,4 +13,4 @@ for files in os.listdir():
 
     new_name = '{}-{}{}'.format(file_number, file_title, file_ext)
 
-    os.rename(files, new_name)
+    os.rename(files, new_name) # closing the for loop as switching the original to a new file name.
