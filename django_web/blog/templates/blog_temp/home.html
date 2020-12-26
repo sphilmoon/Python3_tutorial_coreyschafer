@@ -1,8 +1,15 @@
 {% extends "blog_temp/base.html" %}
 {% block content %}
     {% for people in people %}
-      <h1>{{ people.Name }}</h1>
-      <p>By {{people.Gender}}</p>
-      <p>{{people.Home_Planet}}</p>
+      <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ people.Name }}</a>
+            <small class="text-muted">{{ people.Gender }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ people.title }}</a></h2>
+          <p class="article-content">{{ people.Home_Planet }}</p>
+        </div>
+      </article>
     {% endfor %}
 {% endblock content %}
